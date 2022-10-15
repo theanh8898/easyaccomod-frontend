@@ -1,0 +1,25 @@
+@import "../../assets/css/_vars";
+@import "../../assets/css/_mixin";
+
+
+
+
+ input[type="radio"] {
+  display: none;
+
+  & + svg {
+     width: 24px;
+     height: 24px;
+   }
+}
+.rating__starts {
+  display: flex;
+  color: $yellow-color;
+  cursor: default;
+
+  @include breakpoint-down(small) {
+    .rating__start i{
+      font-size: 1.25rem;
+    }
+  }
+}

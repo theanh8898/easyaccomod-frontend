@@ -1,0 +1,62 @@
+@import "../../assets/css/_vars";
+@import "../../assets/css/_mixin";
+
+.search-bar {
+  margin: 16px 0;
+  z-index: 100;
+
+  .label {
+    font-size: 15px;
+  }
+
+  .typeRoom {
+    width: 139px;
+  }
+
+  .typePrice {
+    width: 139px;
+  }
+
+  .typeArea {
+    width: 139px;
+  }
+
+  .--title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .form-container {
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ea-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -8px;
+
+    > div {
+      flex: 1;
+      padding: 0 12px;
+    }
+
+    .input-group {
+      margin-bottom: 0;
+    }
+
+    .ea-form__btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      button {
+        height: 36px;
+      }
+    }
+  }
+}

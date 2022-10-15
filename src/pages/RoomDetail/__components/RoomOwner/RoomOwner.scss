@@ -1,0 +1,79 @@
+@import "../../../../assets/css/_vars";
+@import "../../../../assets/css/_mixin";
+.room-owner {
+  position: relative;
+  .wrap {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $black-color-light;
+    border-bottom: 1px solid $black-color-light;
+    padding: 10px 0;
+
+    .avatar {
+      width: 60px;
+      margin-right: 10px;
+      border-radius: 50%;
+      border: 1px solid $black-color-light;
+    }
+
+    .info {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        margin: 6px 0;
+        font-size: 1rem;
+        color: $title-color;
+        font-weight: 500;
+      }
+
+      .role {
+        font-size: 0.75rem;
+        color: #9b9b9b;
+      }
+    }
+  }
+
+  .link-to-profile {
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    font-size: 0.75rem;
+    display: block;
+    padding: 4px 12px;
+    border: 1px solid $primary-color-contrast;
+    border-radius: 16px;
+    color: $primary-color-contrast;
+
+    &:hover {
+      color: $yellow-color;
+      border-color: $yellow-color;
+    }
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: $green-color;
+    color: $white-color;
+    border-radius: 4px;
+    margin-top: 12px;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #018447;
+    }
+
+    i {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 1.25rem;
+      letter-spacing: 1.4px;
+    }
+  }
+}

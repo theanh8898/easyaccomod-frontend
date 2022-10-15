@@ -1,0 +1,132 @@
+@import "../../../../assets/css/_vars";
+@import "../../../../assets/css/_mixin";
+
+.rooms-filter {
+
+  &__heading {
+    color: $title-color;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1rem;
+
+    i {
+      margin-right: 4px;
+      font-size: 1.25rem;
+    }
+
+    span {
+      margin-top: 3px;
+    }
+  }
+
+  .filters {
+
+  }
+
+  .filter {
+    margin: 10px 0 30px;
+    padding: 0 16px;
+    color: #666666;
+
+    &__label {
+      margin-bottom: 10px;
+      color: #666666;
+    }
+
+    &__content {
+      padding-bottom: 16px;
+      border-bottom: 1px solid $black-color-light;
+    }
+
+    &__wrapper {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 200px;
+      border: 1px solid $black-color-light;
+      font-size: 0.875rem;
+      padding: 6px 10px;
+
+      i  {
+        font-size: 1.25rem;
+      }
+
+      span {
+        margin: 0 10px;
+      }
+    }
+
+    .filter-checkbox-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .filter-checkbox-item {
+      flex: 0 0 50%;
+      font-size: 0.875rem;
+      margin-bottom: 6px;
+
+      label {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .filter-by-price {
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        width: 80px;
+        height: 2rem;
+        border: 0;
+        outline: #EA2027;
+        padding: 0 8px;
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      span {
+        margin: 0 12px;
+        width: 16px;
+        height: 2px;
+        background-color: #777777;
+      }
+    }
+
+  }
+
+  .filter__btn {
+    background-color: $primary-color;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    margin-top: 16px;
+    border: 0;
+    outline: none;
+
+    &:hover {
+      background-color: $primary-color-contrast
+    }
+  }
+}

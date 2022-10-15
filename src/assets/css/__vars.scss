@@ -1,0 +1,54 @@
+/* Color */
+
+//$primary-color: #ffb617;
+$primary-color: #0479ec;
+$primary-color-dark: #193c9d;
+$primary-color-contrast: #feca57;
+$white-color: #ffffff;
+$white-color-light: rgba(255,255,255,0.6);
+$black-color: #000000;
+$black-color-light: rgba(0, 0, 0, 0.1);
+$title-color: #39335b;
+$text-color: #7c8ca4;
+$green-color: #05c46b;
+$pink-color: #f53b57;
+$blue-color: #0fbcf9;
+$gray-color: #F4F4F4;
+$gray-color-dark: #9b9b9b;
+$red-color: #EA2027;
+$yellow-color: #ffba00;
+
+
+// font
+
+$font-sm: 0.875rem; //14px
+$font-med: 1.125rem; //18px
+
+
+.green-color {
+  color: $green-color;
+}
+
+.pink-color {
+  color: $pink-color;
+}
+
+.red-color {
+  color: $red-color;
+}
+
+.blue-color {
+  color:$blue-color;
+}
+
+.gray-color {
+  color: $gray-color-dark;
+}
+
+.black-color {
+  color: $black-color;
+}
+
+.bg-gray {
+  background-color:  $gray-color;
+}

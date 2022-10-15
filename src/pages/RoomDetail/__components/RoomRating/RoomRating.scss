@@ -1,0 +1,122 @@
+@import "../../../../assets/css/_vars";
+@import "../../../../assets/css/_mixin";
+
+.room-rating {
+  border-top: 1px solid $black-color-light;
+  margin-top: 40px;
+
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding: 30px;
+    border: 1px solid #a3ccec;
+    background-color: rgba(193, 240, 255, 0.4);
+
+    @include breakpoint-down(small) {
+      padding: 20px;
+    }
+  }
+
+  &-overview {
+
+    &__briefing {
+      margin-right: 1.875rem;
+    }
+
+    &__score-wrapper {
+      color: $primary-color;
+      font-size: 1.125rem;
+    }
+
+    &__rating-score {
+      font-size: 1.875rem;
+      margin-right: 10px;
+    }
+
+    &__stars {
+      margin-top: 10px;
+    }
+
+    &__filters {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__filter {
+      padding: 6px 10px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      margin: 5px 10px 5px 0;
+      font-size: 0.875rem;
+      height: 2rem;
+      background-color: $white-color;
+      cursor: pointer;
+
+      &--active {
+        border-color: $primary-color;
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+}
+
+.room-rating-comment-item {
+  display: flex;
+  border-bottom: 1px solid $black-color-light;
+  padding: 16px 0;
+
+  &__avatar {
+    height: 44px;
+    width: 44px;
+    background: #9b9b9b no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 1px solid $black-color-light
+  }
+
+  &__main {
+    flex-grow: 1;
+    font-size: 0.875rem;
+  }
+
+  &__author-name {
+    color: $title-color;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+
+  &__rating {
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  &__content {
+    margin: 10px 0 8px;
+  }
+
+  &__created {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #9b9b9b;
+  }
+}
+
+.room-rating-comment-pagination {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}

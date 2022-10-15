@@ -1,0 +1,111 @@
+@import "../../assets/css/_vars";
+@import "../../assets/css/_animations";
+@import "../../assets/css/_mixin";
+
+
+.header__favorite {
+  width: 100px;
+  position: relative;
+  margin-left: 40px;
+  @include breakpoint-down(medium) {
+    width: fit-content;
+    margin-left: 0;
+  }
+
+  &:hover {
+    .header__favorite-list {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: $white-color;
+
+    i {
+      margin-right: 4px;
+    }
+  }
+
+  .header__favorite-list {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    width: 320px;
+    content: '';
+    background-color: $white-color;
+    box-shadow: 0 4px 8px $black-color-light;
+    border-radius: 4px;
+    animation: fadeIn ease-in 0.2s;
+    display: none;
+    z-index: 9;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 0;
+      width: 120px;
+      height: 10px;
+    }
+
+    .header__favorite-item {
+      border-bottom: 1px solid $black-color-light;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &:hover {
+        background-color: rgba(222, 222, 222, 0.6);
+      }
+      &-link {
+        width: 100%;
+        padding: 8px 12px;
+        display: flex;
+      }
+
+      &-img {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+        flex-shrink: 0;
+        margin-right: 6px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: 1px solid $black-color-light;
+        border-radius: 2px;
+      }
+
+      &-title {
+        margin: 0;
+        flex-shrink: 1;
+        font-weight: 500;
+        color: $title-color;
+        font-size: 0.875rem;
+        height: 2.5rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    &--not-logged, &--not-favorite {
+      .wrap {
+        padding: 20px 16px;
+        text-align: center;
+        font-size: 0.875rem;
+
+        a  {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

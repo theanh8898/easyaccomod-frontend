@@ -1,0 +1,130 @@
+@import "../../assets/css/_vars";
+@import "../../assets/css/_mixin";
+
+.room-detail-page {
+
+  &__wrap {
+    background-color: $white-color;
+    border-radius: 4px;
+    padding: 12px 24px;
+  }
+
+  .room {
+    &__text {
+      position: relative;
+    }
+
+    &__title {
+      font-size: 1.375rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    &__overview {
+      margin: 6px 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .price {
+        color: $red-color;
+        font-weight: 500;
+        font-size: 1.25rem;
+      }
+      .area {
+        color: #333333;
+        font-weight: 400;
+      }
+
+      .favorite {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $pink-color;
+        border-radius: 16px;
+        padding: 4px 12px;
+        color: $pink-color;
+        cursor: pointer;
+        i {
+          margin-left: 4px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &__address {
+      display: flex;
+      align-items: center;
+      color: $primary-color;
+      margin-bottom: 16px;
+      line-height: 1.6;
+
+      i {
+        margin-right: 6px;
+      }
+    }
+
+    &__service {
+
+      .title {
+        font-weight: 500;
+      }
+
+      &-list {
+        margin: 8px 0 10px;
+        padding: 0 40px;
+        font-size: 0.9375rem;
+
+        @include breakpoint-down(small) {
+          padding: 0 16px;
+        }
+      }
+
+      &-item {
+        margin-bottom: 10px;
+
+        label {
+          color: #222222;
+          font-weight: 500;
+        }
+
+        span {
+          margin-left: 4px;
+          color: #666666;
+        }
+      }
+    }
+
+    &__description {
+      color: #333333;
+      line-height: 1.6;
+      margin-bottom: 20px;
+
+      h3 {
+        line-height: 1.5;
+        margin: 0;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      pre {
+        font-family: inherit;
+        font-size: inherit;
+      }
+    }
+
+    &__contact {
+      font-weight: 500;
+
+      .phone {
+        color: $green-color;
+        font-size: 1.125rem;
+        letter-spacing: 1.2px;
+      }
+    }
+
+
+  }
+
+}
+

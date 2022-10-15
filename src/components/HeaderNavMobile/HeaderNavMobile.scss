@@ -1,0 +1,88 @@
+@import "../../assets/css/_vars";
+@import "../../assets/css/_animations";
+@import "../../assets/css/_mixin";
+
+.header__navbar-mobile {
+  display: none;
+  margin-right: 6px;
+  position: relative;
+
+  @include breakpoint-down(small) {
+    display: block;
+  }
+  .menu-icon {
+    width: 28px;
+    height: 24px;
+    cursor: pointer;
+    span {
+      width: 28px;
+      height: 2px;
+      display: block;
+      background-color: $white-color;
+      transform-origin: 3px 1px;
+      transition: all ease-in-out 0.3s;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+
+    &.open-menu {
+      span:nth-child(1) {
+        transform: rotate(45deg);
+
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+
+      .menu_overlay {
+        position: fixed;
+        top: 63.39px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: all 300ms linear;
+        z-index: 99;
+      }
+
+      ~ .menu-mobile {
+        right: 0;
+
+      }
+    }
+  }
+
+  .menu-mobile {
+    position: fixed;
+    top:  63.36px;
+    right: -280px;
+    width: 280px;
+    background-color: $white-color;
+    box-shadow: 0 8px 16px $black-color-light;
+    transition: all ease-in 0.3s;
+    z-index: 99;
+    .menu-item {
+
+      a {
+        display: flex;
+        padding: 16px 24px;
+        color: $title-color;
+        align-items: center;
+
+        .material-icons {
+          font-size: 24px;
+        }
+
+        span {
+          flex-grow: 1;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}

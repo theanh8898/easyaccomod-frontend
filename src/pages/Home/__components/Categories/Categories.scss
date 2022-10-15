@@ -1,0 +1,59 @@
+@import "../../../../assets/css/_vars";
+@import "../../../../assets/css/_mixin";
+
+.home-categories {
+  margin: 16px 0 0 0;
+  padding: 10px 0;
+  background: #F4F4F4;
+
+  &__wrap {
+    background: $white-color;
+    padding: 12px;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin: 0 0 6px 0;
+    color: $title-color;
+  }
+
+  &__list {
+
+  }
+
+  &-item {
+    display: flex;
+    padding: 12px;
+    border-radius: 6px;
+    color: $title-color;
+    font-size: 0.875rem;
+    transition: all ease-in 0.15s;
+
+    &:hover {
+      background-color: $primary-color-contrast;
+      color: $white-color;
+    }
+
+    &__img {
+      width: 84px;
+      height: 84px;
+      background-color: #7c8ca4;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+
+    &__title {
+      font-weight: 500;
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .home-categories-item {
+    display: block;
+  }
+}

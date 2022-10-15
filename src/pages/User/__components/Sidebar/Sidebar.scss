@@ -1,0 +1,72 @@
+@import "../../../../assets/css/_vars";
+@import "../../../../assets/css/_mixin";
+
+.user-page-sidebar {
+  background-color: $white-color;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+
+  &__heading {
+    display: flex;
+    margin-bottom: 6px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $black-color-light;
+
+    .avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 1px solid $black-color-light;
+      margin-right: 10px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+
+      span {
+        font-size: 0.875rem;
+      }
+
+      &-name {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .user-nav {
+
+    &-item {
+
+      &__link {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        font-size: 0.875rem;
+        color: #666666;
+
+        &.active {
+          color: $primary-color-dark;
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        span {
+          margin-top: 2px;
+          margin-left: 4px;
+        }
+      }
+
+      &__label {
+        font-weight: 400;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+    }
+  }
+}

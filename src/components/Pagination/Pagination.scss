@@ -1,0 +1,57 @@
+@import "../../assets/css/_vars";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.pagination-item {
+  margin: 0 10px;
+
+  a {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #939393;
+    display: inline-block;
+    min-width: 36px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 2px;
+
+    > i {
+      margin-top: 3px;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+
+    &.not-active {
+      background-color: transparent;
+      color: #939393;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  &--active {
+    a {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+
+    &:hover {
+      a {
+        background-color: $primary-color-contrast;
+      }
+    }
+  }
+
+}
+
+
+

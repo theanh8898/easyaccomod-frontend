@@ -1,0 +1,93 @@
+@import "../../assets/css/_vars";
+@import "../../assets/css/_mixin";
+
+.rooms-page {
+  padding: 20px 0;
+
+  @include breakpoint-down(small) {
+    padding: 0 16px;
+  }
+
+  &__heading {
+    margin: 0;
+    padding: 20px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $title-color;
+    font-size: 1.25rem;
+  }
+
+  &__wrapper {
+
+  }
+
+  &-sidebar {
+    &__heading {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 16px 0;
+      font-weight: 500;
+      color: $title-color;
+      border-bottom: 1px solid $black-color-light;
+      text-transform: uppercase;
+      font-size: 1.125rem;
+
+      i {
+        margin-right: 6px;
+      }
+
+      span {
+        margin-top: 2px;
+      }
+    }
+
+    &__wrapper {
+      padding: 10px;
+
+      .sidebar-list {
+        margin-bottom: 20px;
+      }
+
+      .sidebar-item {
+
+        a {
+          text-transform: uppercase;
+          position: relative;
+          display: block;
+          padding: 8px;
+          color: #333333;
+          font-size: 0.975rem;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        &--active a{
+          color: $primary-color;
+          font-weight: 500;
+
+          &::before {
+            position: absolute;
+            content: '';
+            left: -2px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 5px solid;
+            border-color: transparent transparent transparent $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+
+  &-main {
+
+  }
+
+  &-room-list {
+    padding-top: 20px;
+  }
+}

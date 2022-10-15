@@ -1,0 +1,52 @@
+@import "../../assets/css/_vars";
+@import "../../assets/css/_mixin";
+
+.breadcrumb-section {
+
+  .breadcrumb {
+    display: flex;
+    padding: 20px 0;
+
+    @include breakpoint-down(small) {
+      padding: 24px;
+    }
+
+    &-item {
+      margin-right: 10px;
+      font-size: 0.875rem;
+      white-space: nowrap;
+
+      &.active {
+        color: #6c757d;
+      }
+
+      a {
+        color: #000000;
+        font-weight: 400;
+
+        &:hover {
+          color: $primary-color-contrast;
+        }
+      }
+
+      &:first-child {
+        &::before {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+      }
+
+      &::before {
+        display: inline-block;
+        padding-right: .5rem;
+        color: #6c757d;
+        content: "/";
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.accounts {
+
+}
+
+.user-list-table {
+
+  .user-status {
+    display: block;
+    padding: 3px 6px;
+    margin: 0 6px;
+    color: #ffffff;
+    border-radius: 2px;
+
+    &--active {
+      background-color: #26de81;
+    }
+
+    &--block {
+      background-color: #fc5c65;
+    }
+  }
+
+  .table-cell-actions {
+    span {
+      margin: 0 3px;
+    }
+
+    i {
+      cursor: pointer;
+    }
+  }
+}

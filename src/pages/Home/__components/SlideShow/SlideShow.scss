@@ -1,0 +1,21 @@
+@import "../../../../assets/css/_vars";
+@import "../../../../assets/css/_mixin";
+
+.home-slide-show {
+  padding-top: 20px;
+  @include breakpoint-down(small) {
+    padding-top: 0;
+  }
+  .slide-item {
+    height: 400px;
+    width: 100%;
+    background-color: #7c8ca4;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include breakpoint-down(medium) {
+      height: 300px;
+    }
+  }
+}

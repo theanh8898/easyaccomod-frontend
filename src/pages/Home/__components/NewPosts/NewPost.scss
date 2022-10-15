@@ -1,0 +1,45 @@
+@import "../../../../assets/css/_vars";
+
+.home-new-posts {
+  padding-top: 10px;
+  &__wrap {
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin-top: 0;
+    padding: 12px 12px 0;
+    color: $title-color;
+  }
+
+  &__list {
+    padding: 0 12px;
+  }
+
+  .home-new-post__pagination {
+    margin-top: 20px;
+  }
+
+  &__more {
+    display: flex;
+    padding: 20px 0 40px;
+
+    .btn-link-more {
+      margin: auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      background-color: rgb(255, 186, 0);;
+
+      &:hover {
+        background-color: $primary-color-contrast;
+      }
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+}

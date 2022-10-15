@@ -1,0 +1,70 @@
+@import "../../../../assets/css/_vars";
+
+.user-notification {
+
+  .notifications {
+
+    padding: 20px;
+
+    margin: 10px auto;
+  }
+
+  .notification {
+    display: flex;
+    margin-bottom: 12px;
+    border-bottom: 1px solid $black-color-light;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    &:last-child {
+      padding-bottom: 0;
+      border: none;
+      margin-bottom: 0;
+    }
+
+    &__img {
+      flex-basis: 60px;
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      position: relative;
+      margin-right: 16px;
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 1px solid $black-color-light;
+      }
+    }
+
+
+    &__info {
+      display: flex;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .content {
+
+      }
+
+      .created {
+        margin-top: 10px;
+        font-size: 0.875rem;
+        color: #666666;
+      }
+    }
+
+    &.unread {
+      .notification__info {
+        .content {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+}
